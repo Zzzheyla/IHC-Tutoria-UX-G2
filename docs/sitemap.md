@@ -15,4 +15,4 @@ flowchart TD
 ```
 
 Navegación global (cabecera): Inicio · Reservar · Mis reservas.
-Profundidad máxima: 3 niveles. Exportar a PNG en `docs/diagramas/` si el docente lo pide como imagen.
+Profundidad máxima: 3 niveles. Imagen: [diagramas/sitemap.png](diagramas/sitemap.png)

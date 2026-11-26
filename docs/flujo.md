@@ -1,6 +1,6 @@
 # User flow: reservar una tutoría
 
-Camino exitoso en verde; recuperación de errores en rojo.
+Camino exitoso en verde; recuperación de errores en rojo. Imagen: [diagramas/flujo.png](diagramas/flujo.png)
 
 ```mermaid
 flowchart TD
