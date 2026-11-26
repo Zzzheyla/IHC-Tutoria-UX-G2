@@ -18,8 +18,8 @@ Aplicación web para que estudiantes consulten docentes y asignaturas, elijan mo
 Requisitos: Node.js 18 o superior (solo para el servidor local y las pruebas). No hay dependencias que instalar.
 
 ```bash
-git clone https://github.com/<usuario>/<repo>.git
-cd <repo>
+git clone https://github.com/Zzzheyla/IHC-Tutoria-UX-G2.git
+cd IHC-Tutoria-UX-G2
 npm start        # abre http://localhost:5500
 npm test         # ejecuta las pruebas funcionales (tests/)
 ```
@@ -63,11 +63,12 @@ Accesibilidad: HTML semántico, `label`/`fieldset`/`legend`, errores enlazados c
 | Matriz de trazabilidad | [docs/trazabilidad.md](docs/trazabilidad.md) |
 | Pruebas funcionales | [tests/](tests/) · [tests/casos-de-prueba.md](tests/casos-de-prueba.md) |
 | Plan de evaluación y consentimiento | [evaluacion/plan.md](evaluacion/plan.md) · [evaluacion/consentimiento.md](evaluacion/consentimiento.md) |
+| Guion del facilitador y hoja de registro | [evaluacion/guion-facilitador.md](evaluacion/guion-facilitador.md) · [evaluacion/hoja-registro.md](evaluacion/hoja-registro.md) · [evaluacion/guia-piloto.md](evaluacion/guia-piloto.md) |
 | Piloto P00 | [evaluacion/piloto.md](evaluacion/piloto.md) |
 | Heurísticas de Nielsen | [evaluacion/heuristicas.md](evaluacion/heuristicas.md) |
 | Recorrido cognitivo | [evaluacion/recorrido-cognitivo.md](evaluacion/recorrido-cognitivo.md) |
-| Accesibilidad WCAG | [evaluacion/accesibilidad.md](evaluacion/accesibilidad.md) |
-| Resultados y métricas P01/P02 | [evaluacion/resultados.md](evaluacion/resultados.md) · [evaluacion/metricas.md](evaluacion/metricas.md) |
+| Accesibilidad WCAG + Lighthouse | [evaluacion/accesibilidad.md](evaluacion/accesibilidad.md) |
+| Resultados y métricas P01/P02 | [evaluacion/resultados.md](evaluacion/resultados.md) · [evaluacion/metricas.md](evaluacion/metricas.md) · cálculo: `node evaluacion/calcular.mjs`, `node evaluacion/calcular-sus.mjs` |
 | Hallazgos y backlog | [evaluacion/hallazgos.md](evaluacion/hallazgos.md) · [evaluacion/backlog.md](evaluacion/backlog.md) |
 | Evidencias antes / después | [evidencias/antes/](evidencias/antes/) · [evidencias/despues/](evidencias/despues/) |
 
@@ -78,5 +79,19 @@ Accesibilidad: HTML semántico, `label`/`fieldset`/`legend`, errores enlazados c
 - Las pruebas con usuarios se hicieron con una muestra pequeña (P01, P02), suficiente para detectar problemas, no para conclusiones estadísticas.
 
 ## Versiones
-- **v1**: primera versión evaluada (tag `v1`).
-- **v2**: corrige los dos problemas prioritarios de [evaluacion/hallazgos.md](evaluacion/hallazgos.md) (tag `v2`).
+| Versión | Qué es | Código | Evidencias |
+|---|---|---|---|
+| **v1** | Primera versión funcional; sobre ella se aplicaron heurísticas, recorrido cognitivo, WCAG y las sesiones con usuarios | [tag v1](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/tree/v1) · [release](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/releases/tag/v1) | [evidencias/antes/](evidencias/antes/) |
+| **v2** | Corrige los dos problemas prioritarios de [hallazgos.md](evaluacion/hallazgos.md) | tag v2 _(pendiente)_ | [evidencias/despues/](evidencias/despues/) |
+
+Cambios exactos entre versiones: [comparar v1…v2](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/compare/v1...v2) _(disponible al crear el tag v2)_.
+
+## Resultados de la evaluación (resumen)
+| Método | Resultado v1 | Detalle |
+|---|---|---|
+| Pruebas funcionales | 9/9 aprobadas | [tests/casos-de-prueba.md](tests/casos-de-prueba.md) |
+| Heurísticas de Nielsen | 9 problemas: 1 de severidad 3, 5 de severidad 2, 3 cosméticos | [heuristicas.md](evaluacion/heuristicas.md) |
+| Recorrido cognitivo | 2 fallos (RC1 en T1, RC2 en T2) | [recorrido-cognitivo.md](evaluacion/recorrido-cognitivo.md) |
+| WCAG 2.2 AA | axe-core 0 violaciones · Lighthouse 100/100 · falla 1.4.11 (bordes 1.61:1) | [accesibilidad.md](evaluacion/accesibilidad.md) |
+| Sesiones P01 y P02 | _pendiente_ | [resultados.md](evaluacion/resultados.md) |
+| Hallazgos y correcciones v2 | _pendiente_ | [hallazgos.md](evaluacion/hallazgos.md) |

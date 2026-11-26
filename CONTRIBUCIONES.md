@@ -20,8 +20,10 @@ Cada quien trabaja en su rama y hace commits pequeños con su propia cuenta. Se 
 | 110–120 | README, enlaces, PR final | Merge | Commit final → ID a Moodle |
 
 ## Registro de aportes
-| Integrante | Commits / PR principales |
-|---|---|
-| Sheyla | |
-| David | |
-| Martín | |
+Historial completo: [commits](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/commits/main) · [pull requests](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pulls?q=is%3Apr) · [aportes por persona](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/graphs/contributors)
+
+| Integrante | Aportes principales | Pull requests |
+|---|---|---|
+| Sheyla Pacha | Estructura inicial del repo; perfil, touchpoints, curva emocional; requisitos R1–R6, arquitectura, sitemap, user flow, trazabilidad; wireframes W1–W3 y diagramas; evaluación heurística, recorrido cognitivo, revisión WCAG y Lighthouse; tag y release v1; README | [#7](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/7), [#17](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/17) · revisó/unió [#18](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/18), [#20](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/20), [#22](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/22) |
+| David Pérez | Capas de dominio, infraestructura, aplicación y presentación; pruebas funcionales CP01–CP09; corrección de listeners en Mis reservas; capturas de la v1 | [#16](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/16), [#18](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/18), [#19](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/19) · revisó/unió [#7](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/7), [#17](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/17), [#21](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/21) |
+| Martín Palacios | Plan de evaluación, consentimiento, guion del facilitador, hoja de registro y calculadoras; piloto; hallazgos y backlog | [#20](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/20), [#21](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/21), [#22](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/22) · revisó/unió [#16](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/16), [#19](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/pull/19) |
