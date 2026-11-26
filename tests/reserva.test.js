@@ -1,7 +1,7 @@
 // Pruebas funcionales de dominio y aplicación. Ejecutar: npm test (Node 18+)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validarReserva, hayConflicto, ESTADOS } from '../src/domain/reserva.js';
+import { validarReserva, hayConflicto, validarFecha, ESTADOS } from '../src/domain/reserva.js';
 import { crearReservaService } from '../src/application/reservaService.js';
 import { DOCENTES } from '../src/infrastructure/datos.js';
 
@@ -57,4 +57,9 @@ test('CP08 cancelar libera el horario y bloquea modificaciones', () => {
 });
 test('CP09 conflicto ignora reservas canceladas', () => {
   assert.equal(hayConflicto(base, [{ ...base, id: 'x', estado: ESTADOS.CANCELADA }]), false);
+});
+test('CP10 validarFecha rechaza pasado y fin de semana, y acepta día hábil', () => {
+  assert.match(validarFecha('2026-11-20', HOY), /ya pasó/);
+  assert.match(validarFecha('2026-11-28', HOY), /fin de semana/);
+  assert.equal(validarFecha('2026-11-27', HOY), '');
 });

@@ -18,6 +18,16 @@ export const CAMPOS_REQUERIDOS = Object.freeze({
   motivo: 'Cuéntale al docente el tema de la tutoría.',
 });
 
+/** Devuelve el mensaje de error de una fecha (AAAA-MM-DD) o '' si es válida. */
+export function validarFecha(fecha, hoy = new Date()) {
+  const f = new Date(fecha + 'T00:00:00');
+  const h = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
+  if (isNaN(f)) return 'La fecha no es válida.';
+  if (f < h) return 'La fecha ya pasó. Elige hoy o una fecha futura.';
+  if (f.getDay() === 0 || f.getDay() === 6) return 'No hay tutorías en fin de semana. Elige de lunes a viernes.';
+  return '';
+}
+
 /** Valida un borrador de reserva. Devuelve { valido, errores: {campo: mensaje} } */
 export function validarReserva(r, hoy = new Date()) {
   const errores = {};
@@ -31,13 +41,8 @@ export function validarReserva(r, hoy = new Date()) {
     errores.correo = 'Usa tu correo institucional, por ejemplo: nombre@uta.edu.ec';
   }
   if (r.fecha) {
-    const f = new Date(r.fecha + 'T00:00:00');
-    const h = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
-    if (isNaN(f)) errores.fecha = 'La fecha no es válida.';
-    else if (f < h) errores.fecha = 'La fecha ya pasó. Elige hoy o una fecha futura.';
-    else if (f.getDay() === 0 || f.getDay() === 6) {
-      errores.fecha = 'No hay tutorías en fin de semana. Elige de lunes a viernes.';
-    }
+    const errFecha = validarFecha(r.fecha, hoy);
+    if (errFecha) errores.fecha = errFecha;
   }
   if (r.motivo && r.motivo.trim().length > 0 && r.motivo.trim().length < 10) {
     errores.motivo = 'Describe el tema con al menos 10 caracteres.';
