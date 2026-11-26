@@ -89,21 +89,25 @@ function rutaReservar(errores = {}) {
   });
 }
 
+let escuchaReservas = null; // permite quitar el listener al cambiar de pantalla
+
 function rutaReservas() {
+  escuchaReservas?.abort();
+  escuchaReservas = new AbortController();
   pintar(VistaReservas(servicio, avisoReservas));
   avisoReservas = '';
   const dlg = document.getElementById('dlg-cancelar');
   let idCancelar = null;
   let origen = null;
 
-  app.addEventListener('click', manejar);
+  app.addEventListener('click', manejar, { signal: escuchaReservas.signal });
+  dlg.addEventListener('close', () => origen?.isConnected && origen.focus(), { signal: escuchaReservas.signal });
   function manejar(e) {
     const t = e.target;
     if (t.dataset.modificar) {
       const r = servicio.obtener(t.dataset.modificar);
       const { id, estado, creada, modificada, ...datos } = r;
       repositorioBorrador.guardar({ ...datos, editandoId: id, paso: 4 });
-      app.removeEventListener('click', manejar);
       location.hash = '#/reservar';
     }
     if (t.dataset.cancelar) {
@@ -119,14 +123,14 @@ function rutaReservas() {
       if (t.dataset.dlg === 'si') {
         servicio.cancelar(idCancelar);
         avisoReservas = `Reserva ${idCancelar} cancelada.`;
-        app.removeEventListener('click', manejar);
         rutaReservas();
-      } else origen?.focus();
+      }
     }
   }
 }
 
 function router() {
+  escuchaReservas?.abort();
   const [, ruta, param] = (location.hash || '#/').split('/');
   document.querySelectorAll('.nav a').forEach((a) => a.toggleAttribute('aria-current', a.getAttribute('href') === '#/' + (ruta || '')));
   if (ruta === 'reservar') return rutaReservar();
