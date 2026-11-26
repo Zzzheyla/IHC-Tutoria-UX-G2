@@ -3,8 +3,9 @@
 **Objetivo:** comprobar si un estudiante puede reservar, modificar y cancelar una tutoría sin ayuda, en poco tiempo y con pocos errores.
 **Producto evaluado:** Tutoría UX v1 (tag `v1`) y luego v2.
 **Participantes:** P00 (piloto), P01 y P02: estudiantes de la UTA **que no sean desarrolladores del proyecto**.
-**Dispositivo:** _(celular / laptop)_ · **Lugar:** _(laboratorio / aula)_ · **Fecha:** _____
-**Roles:** facilitador: Martín Palacios · observador/cronometrista: _____ · notas: _____
+**Dispositivo:** laptop (P01) y celular Android (P02) · **Lugar:** laboratorio FISEI · **Fecha:** 26/11/2026
+**Roles:** facilitador: Martín Palacios · observador/cronometrista: David Pérez · notas: Sheyla Pacha
+> Las sesiones P01, P02 y la reevaluación v2 se registraron con **datos** (ver [metricas.md](metricas.md)).
 **Protocolo:** pensar en voz alta. Solo se da ayuda si el participante lo pide o está bloqueado más de 60 s (se registra como "ayuda").
 
 ## Preparación antes de cada participante
