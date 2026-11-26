@@ -20,4 +20,6 @@ xychart-beta
   line [-1, 1, -1, 0, 1, 2, 1]
 ```
 
+![Curva emocional](curva-emocional.png)
+
 **Puntos bajos** (etapas 3 y 4) coinciden con los momentos críticos; ahí se concentran las mejoras de diseño y las tareas de evaluación T1 y T2.
