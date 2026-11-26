@@ -1,6 +1,6 @@
 // PRESENTACIÓN: pantallas. Solo dibujan y delegan acciones al servicio.
 import { Campo, GrupoOpciones, Pasos, ResumenErrores, Insignia, formatoFecha, esc } from './componentes.js';
-import { MODALIDADES } from '../domain/reserva.js';
+import { MODALIDADES, validarFecha } from '../domain/reserva.js';
 
 export const NOMBRES_PASOS = ['Docente', 'Modalidad y horario', 'Tus datos', 'Confirmar'];
 export const CAMPOS_POR_PASO = {
@@ -58,7 +58,8 @@ export function VistaReservar(servicio, b, errores = {}) {
   }
 
   if (paso === 2) {
-    const horas = servicio.horariosDisponibles(b.docenteId, b.fecha, b.editandoId);
+    const errFecha = b.fecha ? validarFecha(b.fecha) : '';
+    const horas = errFecha ? [] : servicio.horariosDisponibles(b.docenteId, b.fecha, b.editandoId);
     cuerpo =
       GrupoOpciones({
         nombre: 'modalidad',
@@ -75,11 +76,13 @@ export function VistaReservar(servicio, b, errores = {}) {
         id: 'fecha',
         etiqueta: 'Fecha',
         ayuda: 'De lunes a viernes, desde hoy.',
-        error: errores.fecha,
+        error: errores.fecha || errFecha,
         control: `<input type="date" {{attrs}} value="${esc(b.fecha || '')}" min="${new Date().toISOString().slice(0, 10)}">`,
       }) +
       (b.fecha
-        ? horas.length
+        ? errFecha
+          ? `<p class="ayuda">Elige otra fecha para ver los horarios.</p>`
+          : horas.length
           ? GrupoOpciones({
               nombre: 'hora',
               leyenda: `Horarios libres el ${formatoFecha(b.fecha)}`,
