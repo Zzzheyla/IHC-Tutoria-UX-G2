@@ -1,0 +1,109 @@
+/* Mobile first. Contraste AA verificado para texto sobre fondo. */
+:root {
+  --primario: #8b1d2c;      /* granate UTA */
+  --primario-osc: #6a1520;
+  --texto: #1d1d1f;
+  --suave: #555b66;
+  --fondo: #f6f6f8;
+  --borde: #c9ccd3;
+  --error: #b00020;
+  --exito: #1e6b34;
+  --aviso: #7a4b00;
+  --foco: #0b57d0;
+  --radio: 10px;
+  font-size: 100%;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, "Segoe UI", Roboto, sans-serif; color: var(--texto); background: var(--fondo); line-height: 1.5; }
+.contenedor { max-width: 960px; margin: 0 auto; padding: 1rem; }
+h1 { font-size: 1.6rem; margin: .5rem 0 1rem; }
+h2 { font-size: 1.2rem; }
+a { color: var(--primario); }
+
+/* Foco visible para teclado */
+:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; border-radius: 4px; }
+.saltar { position: absolute; left: -999px; }
+.saltar:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem 1rem; z-index: 10; }
+
+.cabecera { background: var(--primario); color: #fff; }
+.cabecera .contenedor { display: flex; flex-direction: column; gap: .5rem; }
+.marca { color: #fff; text-decoration: none; font-size: 1.2rem; }
+.marca span { font-size: .8rem; opacity: .9; display: block; }
+.nav { display: flex; gap: .25rem; flex-wrap: wrap; }
+.nav a { color: #fff; text-decoration: none; padding: .5rem .75rem; border-radius: 6px; min-height: 44px; display: inline-flex; align-items: center; }
+.nav a[aria-current] { background: rgba(255,255,255,.2); font-weight: 600; }
+.nav a:focus-visible { outline-color: #fff; }
+
+.lead { font-size: 1.1rem; color: var(--suave); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .6rem 1.1rem; border: 2px solid var(--primario); background: #fff; color: var(--primario); border-radius: var(--radio); font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn--primario { background: var(--primario); color: #fff; }
+.btn--primario:hover { background: var(--primario-osc); }
+.btn--peligro { border-color: var(--error); color: var(--error); }
+.link { background: none; border: 0; color: var(--primario); text-decoration: underline; cursor: pointer; font: inherit; padding: .25rem; }
+.acciones-inicio, .barra-acciones { display: flex; flex-direction: column; gap: .5rem; margin: 1rem 0; }
+
+.tarjetas { list-style: none; padding: 0; display: grid; gap: .75rem; }
+.tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1rem; }
+.tarjeta h2, .tarjeta h3 { margin: 0 0 .25rem; }
+.tarjeta--inactiva { opacity: .75; }
+.tarjeta-cab { display: flex; justify-content: space-between; gap: .5rem; align-items: start; }
+.meta { color: var(--suave); font-size: .9rem; margin: 0; }
+.insignia { font-size: .8rem; padding: .15rem .6rem; border-radius: 99px; font-weight: 600; white-space: nowrap; }
+.insignia--confirmada { background: #dff3e4; color: var(--exito); }
+.insignia--modificada { background: #fff1d6; color: var(--aviso); }
+.insignia--cancelada { background: #eceef1; color: var(--suave); }
+
+/* Pasos */
+.pasos { list-style: none; padding: 0; display: flex; gap: .25rem; margin: 0 0 1rem; font-size: .8rem; }
+.pasos li { flex: 1; color: var(--suave); display: flex; flex-direction: column; align-items: center; text-align: center; gap: .2rem; }
+.pasos .num { width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid var(--borde); display: grid; place-items: center; background: #fff; font-weight: 700; }
+.pasos .activo { color: var(--texto); font-weight: 700; }
+.pasos .activo .num { border-color: var(--primario); background: var(--primario); color: #fff; }
+.pasos .hecho .num { border-color: var(--exito); color: var(--exito); }
+
+/* Formularios */
+form { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1rem; }
+.campo, .grupo { margin: 0 0 1.25rem; }
+.grupo { border: 0; padding: 0; }
+label, legend { font-weight: 600; display: block; margin-bottom: .25rem; }
+input[type=text], input[type=email], input[type=date], select, textarea { width: 100%; min-height: 44px; padding: .6rem; border: 2px solid var(--borde); border-radius: 8px; font: inherit; background: #fff; }
+.opciones { display: grid; gap: .5rem; }
+.opcion { display: flex; gap: .6rem; align-items: flex-start; border: 2px solid var(--borde); border-radius: 8px; padding: .75rem; cursor: pointer; font-weight: 400; }
+.opcion:has(input:checked) { border-color: var(--primario); background: #fbf2f3; }
+.opcion input { margin-top: .3rem; width: 1.1rem; height: 1.1rem; }
+.opcion small { display: block; color: var(--suave); }
+.ayuda { color: var(--suave); font-size: .9rem; margin: 0 0 .25rem; }
+.error { color: var(--error); font-weight: 600; margin: .3rem 0 0; }
+.campo--error input, .campo--error select, .campo--error textarea { border-color: var(--error); }
+
+.alerta { border-radius: var(--radio); padding: 1rem; margin: 0 0 1rem; border-left: 6px solid; background: #fff; }
+.alerta h1, .alerta h2 { margin-top: 0; }
+.alerta--error { border-color: var(--error); }
+.alerta--error a { color: var(--error); }
+.alerta--exito { border-color: var(--exito); }
+.alerta--aviso { border-color: var(--aviso); }
+
+.resumen { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: .5rem 1rem; margin: 0 0 1rem; }
+.resumen div { display: flex; flex-direction: column; padding: .5rem 0; border-bottom: 1px solid #eee; }
+.resumen div:last-child { border-bottom: 0; }
+.resumen dt { color: var(--suave); font-size: .85rem; }
+.resumen dd { margin: 0; display: flex; justify-content: space-between; gap: .5rem; }
+
+dialog { border: 0; border-radius: var(--radio); padding: 1.5rem; max-width: 26rem; }
+dialog::backdrop { background: rgba(0,0,0,.5); }
+.pie { color: var(--suave); font-size: .85rem; text-align: center; }
+
+/* Escritorio */
+@media (min-width: 720px) {
+  .cabecera .contenedor { flex-direction: row; justify-content: space-between; align-items: center; }
+  .acciones-inicio, .barra-acciones { flex-direction: row; }
+  .barra-acciones { justify-content: space-between; }
+  .tarjetas { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .opciones { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .resumen div { flex-direction: row; gap: 1rem; }
+  .resumen dt { width: 8rem; flex-shrink: 0; }
+  .resumen dd { flex: 1; }
+  .pasos { font-size: .9rem; }
+  .pasos li { flex-direction: row; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
