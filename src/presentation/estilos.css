@@ -6,6 +6,7 @@
   --suave: #555b66;
   --fondo: #f6f6f8;
   --borde: #c9ccd3;
+  --borde-campo: #8a8f98;  /* 3.25:1 sobre blanco (WCAG 1.4.11) */
   --error: #b00020;
   --exito: #1e6b34;
   --aviso: #7a4b00;
@@ -66,9 +67,9 @@ form { background: #fff; border: 1px solid var(--borde); border-radius: var(--ra
 .campo, .grupo { margin: 0 0 1.25rem; }
 .grupo { border: 0; padding: 0; }
 label, legend { font-weight: 600; display: block; margin-bottom: .25rem; }
-input[type=text], input[type=email], input[type=date], select, textarea { width: 100%; min-height: 44px; padding: .6rem; border: 2px solid var(--borde); border-radius: 8px; font: inherit; background: #fff; }
+input[type=text], input[type=email], input[type=date], select, textarea { width: 100%; min-height: 44px; padding: .6rem; border: 2px solid var(--borde-campo); border-radius: 8px; font: inherit; background: #fff; }
 .opciones { display: grid; gap: .5rem; }
-.opcion { display: flex; gap: .6rem; align-items: flex-start; border: 2px solid var(--borde); border-radius: 8px; padding: .75rem; cursor: pointer; font-weight: 400; }
+.opcion { display: flex; gap: .6rem; align-items: flex-start; border: 2px solid var(--borde-campo); border-radius: 8px; padding: .75rem; cursor: pointer; font-weight: 400; }
 .opcion:has(input:checked) { border-color: var(--primario); background: #fbf2f3; }
 .opcion input { margin-top: .3rem; width: 1.1rem; height: 1.1rem; }
 .opcion small { display: block; color: var(--suave); }
