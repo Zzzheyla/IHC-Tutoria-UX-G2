@@ -1,6 +1,6 @@
 # Resultados de las sesiones
 
-Fuente: [metricas.md](metricas.md). Sesiones: P01 (fecha ___), P02 (fecha ___).
+Fuente: [metricas.md](metricas.md). Sesiones: P01 (26/11/2026), P02 (26/11/2026).
 
 ## Resumen por tarea (v1)
 | Tarea | Tasa de éxito | Tiempo promedio (s) | Errores totales | Ayudas totales | SEQ promedio |
