@@ -1,6 +1,10 @@
 # Wireframes (baja fidelidad, móvil)
 
-Versión digital/papel: guardar imágenes en `ux/wireframes/` (W1.png, W2.png, W3.png) y enlazarlas aquí.
+| W1 Inicio | W2 Reservar (paso 2 con error) | W3 Mis reservas |
+|---|---|---|
+| ![W1](wireframes/W1.png) | ![W2](wireframes/W2.png) | ![W3](wireframes/W3.png) |
+
+Abajo, la versión en texto de cada wireframe.
 
 ## W1 — Inicio (R1)
 ```
