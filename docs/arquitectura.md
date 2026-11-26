@@ -1,5 +1,7 @@
 # Arquitectura de software
 
+Imagen: [diagramas/arquitectura.png](diagramas/arquitectura.png)
+
 Arquitectura en 4 capas con dependencias hacia adentro (presentación → aplicación → dominio; infraestructura se inyecta en aplicación).
 
 ```mermaid
