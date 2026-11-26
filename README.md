@@ -76,22 +76,22 @@ Accesibilidad: HTML semántico, `label`/`fieldset`/`legend`, errores enlazados c
 - Persistencia solo local (`localStorage`): las reservas viven en el navegador del usuario; no hay servidor ni autenticación.
 - El catálogo de docentes y horarios es simulado (`infrastructure/datos.js`).
 - No se envían correos reales de confirmación ni enlaces de reunión.
-- Las pruebas con usuarios se hicieron con una muestra pequeña (P01, P02), suficiente para detectar problemas, no para conclusiones estadísticas.
+- La reevaluación v2 repite T1 con los mismos participantes, por lo que hay efecto de aprendizaje.
 
 ## Versiones
 | Versión | Qué es | Código | Evidencias |
 |---|---|---|---|
 | **v1** | Primera versión funcional; sobre ella se aplicaron heurísticas, recorrido cognitivo, WCAG y las sesiones con usuarios | [tag v1](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/tree/v1) · [release](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/releases/tag/v1) | [evidencias/antes/](evidencias/antes/) |
-| **v2** | Corrige los dos problemas prioritarios de [hallazgos.md](evaluacion/hallazgos.md) | tag v2 _(pendiente)_ | [evidencias/despues/](evidencias/despues/) |
+| **v2** | Corrige HZ1 (fecha no válida) y HZ2 (contraste de bordes) de [hallazgos.md](evaluacion/hallazgos.md) | [tag v2](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/tree/v2) · [release](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/releases/tag/v2) | [evidencias/despues/](evidencias/despues/) |
 
-Cambios exactos entre versiones: [comparar v1…v2](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/compare/v1...v2) _(disponible al crear el tag v2)_.
+Cambios exactos entre versiones: [comparar v1…v2](https://github.com/Zzzheyla/IHC-Tutoria-UX-G2/compare/v1...v2).
 
 ## Resultados de la evaluación (resumen)
-| Método | Resultado v1 | Detalle |
+| Método | Resultado | Detalle |
 |---|---|---|
-| Pruebas funcionales | 9/9 aprobadas | [tests/casos-de-prueba.md](tests/casos-de-prueba.md) |
+| Pruebas funcionales | v1: 9/9 · v2: 10/10 | [tests/casos-de-prueba.md](tests/casos-de-prueba.md) |
 | Heurísticas de Nielsen | 9 problemas: 1 de severidad 3, 5 de severidad 2, 3 cosméticos | [heuristicas.md](evaluacion/heuristicas.md) |
 | Recorrido cognitivo | 2 fallos (RC1 en T1, RC2 en T2) | [recorrido-cognitivo.md](evaluacion/recorrido-cognitivo.md) |
-| WCAG 2.2 AA | axe-core 0 violaciones · Lighthouse 100/100 · falla 1.4.11 (bordes 1.61:1) | [accesibilidad.md](evaluacion/accesibilidad.md) |
-| Sesiones P01 y P02 | _pendiente_ | [resultados.md](evaluacion/resultados.md) |
-| Hallazgos y correcciones v2 | _pendiente_ | [hallazgos.md](evaluacion/hallazgos.md) |
+| WCAG 2.2 AA | v1: axe 0 violaciones, Lighthouse 100, falla 1.4.11 (1.61:1) · v2: 1.4.11 cumple (3.25:1), Lighthouse 100 | [accesibilidad.md](evaluacion/accesibilidad.md) |
+| Sesiones P01 y P02 (datos simulados con autorización del docente) | T1 la tarea más difícil: 50 % de éxito sin ayuda, 160 s, SEQ 3.5 · SUS promedio 72.5 | [resultados.md](evaluacion/resultados.md) |
+| Hallazgos y correcciones v2 | 4 hallazgos; HZ1 y HZ2 corregidos · T1 en v2: 100 % de éxito, 92 s (−42 %), SEQ 6.0 | [hallazgos.md](evaluacion/hallazgos.md) |
