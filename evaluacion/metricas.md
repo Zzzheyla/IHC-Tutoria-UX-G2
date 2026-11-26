@@ -3,13 +3,13 @@
 ## v1
 | Part. | Tarea | Éxito (1/0.5/0) | Tiempo (s) | Errores | Ayudas | SEQ (1–7) | Observación / cita |
 |---|---|---|---|---|---|---|---|
-| P01 | T1 | 1 | 145 | 2 | 1 | 3 | "No encontraba el botón para continuar". |
+| P01 | T1 | 0.5 | 145 | 2 | 1 | 3 | "No encontraba el botón para continuar". |
 | P01 | T2 | 1 | 48 | 0 | 0 | 6 | Flujo fluido sin inconvenientes. |
 | P01 | T3 | 0.5 | 92 | 1 | 1 | 4 | Requirió ayuda para volver a la pantalla principal. |
 | P02 | T1 | 1 | 110 | 1 | 0 | 5 | Se detuvo a leer la interfaz unos segundos. |
 | P02 | T2 | 0.5 | 85 | 3 | 1 | 3 | Da varios clics esperando confirmación. |
 | P02 | T3 | 1 | 60 | 0 | 0 | 6 | Completó la tarea sin contratiempos. |
-| P03 | T1 | 1 | 130 | 2 | 1 | 4 | "El color azul claro del botón se pierde". |
+| P03 | T1 | 0.5 | 130 | 2 | 1 | 4 | 130 s, 2 errores. |
 | P03 | T2 | 1 | 42 | 0 | 0 | 7 | Realizado rápidamente. |
 | P03 | T3 | 0.5 | 105 | 2 | 1 | 3 | Confusión con la navegación de retorno. |
 
