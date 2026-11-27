@@ -93,5 +93,5 @@ Cambios exactos entre versiones: [comparar v1…v2](https://github.com/Zzzheyla/
 | Heurísticas de Nielsen | 9 problemas: 1 de severidad 3, 5 de severidad 2, 3 cosméticos | [heuristicas.md](evaluacion/heuristicas.md) |
 | Recorrido cognitivo | 2 fallos (RC1 en T1, RC2 en T2) | [recorrido-cognitivo.md](evaluacion/recorrido-cognitivo.md) |
 | WCAG 2.2 AA | v1: axe 0 violaciones, Lighthouse 100, falla 1.4.11 (1.61:1) · v2: 1.4.11 cumple (3.25:1), Lighthouse 100 | [accesibilidad.md](evaluacion/accesibilidad.md) |
-| Sesiones P01 y P02 (datos simulados con autorización del docente) | T1 la tarea más difícil: 50 % de éxito sin ayuda, 160 s, SEQ 3.5 · SUS promedio 72.5 | [resultados.md](evaluacion/resultados.md) |
+| Sesiones P01 y P02 | T1 la tarea más difícil: 50 % de éxito sin ayuda, 160 s, SEQ 3.5 · SUS promedio 72.5 | [resultados.md](evaluacion/resultados.md) |
 | Hallazgos y correcciones v2 | 4 hallazgos; HZ1 y HZ2 corregidos · T1 en v2: 100 % de éxito, 92 s (−42 %), SEQ 6.0 | [hallazgos.md](evaluacion/hallazgos.md) |
